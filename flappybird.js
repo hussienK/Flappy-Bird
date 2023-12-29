@@ -109,8 +109,17 @@ function update() {
     context.fillText(score, 5, 45);
 
     if (gameOver) {
+        updateScore();
         context.fillText("GAME OVER", 5, 90);
     }
+}
+
+function updateScore() {
+    // Assuming the game updates the score and wants to notify the parent
+    const newScore = 100; // Replace this with the actual updated score
+
+    // Send a message to the parent page
+    window.parent.postMessage({ score: newScore }, 'https://yourusername.github.io');
 }
 
 function placePipes() {
