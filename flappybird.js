@@ -114,13 +114,13 @@ function update() {
     }
 }
 
-function updateScore() {
-    // Assuming the game updates the score and wants to notify the parent
-    const newScore = 100; // Replace this with the actual updated score
+        function updateScore() {
+            // Assuming the game updates the score and wants to notify the parent
+            const newScore = 100; // Replace this with the actual updated score
 
-    // Send a message to the parent page
-    window.parent.postMessage({ score: newScore }, 'https://yourusername.github.io');
-}
+            // Send a message to the parent page
+            window.parent.postMessage({ score: newScore }, 'https://yourusername.github.io');
+        }
 
 function placePipes() {
     if (gameOver) {
