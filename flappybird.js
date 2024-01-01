@@ -119,7 +119,7 @@ function update() {
             const newScore = 100; // Replace this with the actual updated score
 
             // Send a message to the parent page
-            window.parent.postMessage({ score: newScore }, 'https://yourusername.github.io');
+            window.parent.postMessage({ score: newScore }, 'https://hussienk.github.io');
         }
 
 function placePipes() {
