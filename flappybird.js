@@ -5,6 +5,8 @@ let boardWidth = 360;
 let boardHeight = 640;
 let context;
 
+updateScore(0);
+
 //bird
 let birdWidth = 34; //width/height ratio = 408/228 = 17/12
 let birdHeight = 24;
@@ -109,14 +111,14 @@ function update() {
     context.fillText(score, 5, 45);
 
     if (gameOver) {
-        updateScore();
+        updateScore(Math.floor(score / 10));
         context.fillText("GAME OVER", 5, 90);
     }
 }
 
-        function updateScore() {
+        function updateScore(amt) {
             // Assuming the game updates the score and wants to notify the parent
-            const newScore = 100; // Replace this with the actual updated score
+            const newScore = amt; // Replace this with the actual updated score
 
             // Send a message to the parent page
             window.parent.postMessage({ score: newScore }, 'https://hussienk.github.io');
